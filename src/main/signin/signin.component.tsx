@@ -1,16 +1,34 @@
 import React from 'react';
-import { SafeAreaView, View, StyleSheet, StatusBar, Text, TouchableOpacity } from "react-native";
+import { 
+  Image,
+  SafeAreaView, 
+  View, 
+  StyleSheet, 
+  StatusBar, 
+  Text, 
+  TouchableOpacity 
+} from "react-native";
 import colors from "../../shared/theme/colors";
 import { Actions } from "react-native-router-flux";
+import images from "../../asset/images";
+import LogoComponent from '../../shared/component/logo';
 
 class SigninComponent extends React.Component<any, any> {
   render() {
     return (
       <SafeAreaView style={styles.mainContainer}>
-        <StatusBar backgroundColor={colors.primary} barStyle={'dark-content'} />
+        <StatusBar backgroundColor={colors.flickrBlue} barStyle={'light-content'} />
 
         <View
-          style={styles.viewContainer}
+          style={styles.topContainer}
+        >
+          <LogoComponent 
+            source={images.img_logo_flickr}
+          />
+        </View>
+
+        <View
+          style={styles.bottomContainer}
         >
           <TouchableOpacity
             onPress={() => {
@@ -21,7 +39,7 @@ class SigninComponent extends React.Component<any, any> {
             <Text
               style={styles.buttonText}
             >
-              {`Go to Home Page`}
+              {`Get Started`}
             </Text>
           </TouchableOpacity>
         </View>
@@ -35,10 +53,16 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.primary
   },
-  viewContainer: {
+  topContainer: {
+    flex: 1,
+    padding: 30,
+    backgroundColor: colors.flickrBlue,
+    borderBottomRightRadius: 300
+  },
+  bottomContainer: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
     padding: 20
   },
   buttonContainer: {
@@ -47,7 +71,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 35,
-    backgroundColor: 'darkred'
+    backgroundColor: colors.flickrPink
   },
   buttonText: {
     color: 'white',
