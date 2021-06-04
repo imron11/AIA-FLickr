@@ -4,6 +4,12 @@ import { Router, Scene, Stack } from "react-native-router-flux";
 import SigninComponent from "./src/main/signin/signin.component";
 import HomeComponent from "./src/main/home/home.component";
 
+// To Allow network debugger
+XMLHttpRequest = (global as any).originalXMLHttpRequest
+  ? (global as any).originalXMLHttpRequest
+  : (global as any).XMLHttpRequest;
+
+
 const App = () => {
   return (
     <>

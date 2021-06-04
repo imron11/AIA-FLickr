@@ -26,7 +26,8 @@ interface Props {
     keyboardType?: KeyboardTypeOptions;
     leftColumn?: any;
     rightColumn?: any;
-    value?: any
+    value?: any;
+    onSubmit?: any;
 }
 
 const TextInputComponent = (props: Props) => {
@@ -52,6 +53,9 @@ const TextInputComponent = (props: Props) => {
                 autoCapitalize={props.autoCapitalize}
                 onChangeText={(value) => { props.onChangeText(value) }}
                 keyboardType={props.keyboardType || 'default'}
+                onSubmitEditing={() => {
+                    props.onSubmit();
+                }}
             />
             {(props.clearButton) && (
                 <TouchableOpacity
