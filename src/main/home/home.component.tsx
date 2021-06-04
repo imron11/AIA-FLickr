@@ -2,11 +2,8 @@ import React from 'react';
 import {
   ActivityIndicator,
   Dimensions,
-  FlatList,
-  Image,
   SafeAreaView,
   StyleSheet,
-  TouchableOpacity,
   View,
 } from "react-native";
 import { observer } from "mobx-react";
@@ -17,64 +14,22 @@ import LogoComponent from '../../shared/component/logo';
 import images from '../../asset/images';
 import icons from '../../asset/icons';
 import IconButtonComponent from '../../shared/component/button/icon.button';
-import { scaledHorizontal, scaledVertical } from "../../shared/helper/scale.helper";
+import { scaledVertical } from "../../shared/helper/scale.helper";
 import HomeInputSection from './section/home-input.section';
 import _ from "lodash";
+import HomeListSection from './section/home-list.section';
 
 @observer
 class HomeComponent extends React.Component<any, any> {
 
   private _homeStore = container.resolve(HomeStore);
 
-  state = {
-    imageWidth: 0
-  }
-
   async componentDidMount() {
     this._homeStore.tags = "";
     await this._homeStore.getListImage();
   }
 
-  renderCard = ({ index, item }) => {
-
-    const actualWidth = _.get(item, 'width');
-    const actualHeight = _.get(item, 'height');
-
-    if (this._homeStore.isLoading) {
-      return (
-        <ActivityIndicator
-          size={'small'}
-          color={colors.flickrPink}
-        />
-      );
-    }
-
-    return (
-      <View
-        key={index}
-        style={styles.imageContainer}
-        onLayout={(e) => {
-          const { width } = e.nativeEvent.layout;
-          this.setState({
-            imageWidth: width
-          })
-        }}
-      >
-        <Image
-          source={{ uri: _.get(item, 'url') }}
-          resizeMode={'cover'}
-          style={{
-            width: "100%",
-            height: actualWidth * (this.state.imageWidth / actualHeight)
-          }}
-        />
-      </View>
-    );
-  }
-
   render() {
-    const dataImages = this._homeStore.dataImages;
-
     return (
       <SafeAreaView style={styles.mainContainer}>
         <View
@@ -107,19 +62,7 @@ class HomeComponent extends React.Component<any, any> {
                 }}
               />
               :
-              <FlatList
-                data={dataImages}
-                onRefresh={() => { this._homeStore.doRefresh()}}
-                refreshing={this._homeStore.isLoading}
-                keyExtractor={(item, index) => index.toString()}
-                renderItem={this.renderCard}
-                numColumns={2}
-                contentContainerStyle={{
-                  
-                  paddingTop: scaledVertical(20),
-                  paddingBottom: scaledVertical(50)
-                }}
-              />
+              <HomeListSection />
             }
           </View>
         </View>
@@ -147,17 +90,6 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 25,
     padding: scaledVertical(30)
   },
-
-  imageContainer: {
-    borderRadius: 15,
-    overflow: 'hidden',
-    justifyContent: "center",
-    alignItems: "center",
-    marginVertical: scaledVertical(10),
-    flex: 1 / 2,
-    marginHorizontal: scaledHorizontal(10),
-    backgroundColor: 'white',
-  }
 });
 
 export default HomeComponent;
