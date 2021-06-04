@@ -133,6 +133,7 @@ class HomeListSection extends React.Component<any, any> {
               isModalVisible: false
             });
           }}
+          title={"Detail Image"}
         >
           <WebView source={{ uri: this.state.selectedUrl }} />
         </BottomSlideModal>

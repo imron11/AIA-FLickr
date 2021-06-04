@@ -1,12 +1,12 @@
 import React from 'react';
-import { 
+import {
   Image,
-  SafeAreaView, 
-  View, 
-  StyleSheet, 
-  StatusBar, 
-  Text, 
-  TouchableOpacity 
+  SafeAreaView,
+  View,
+  StyleSheet,
+  StatusBar,
+  Text,
+  TouchableOpacity
 } from "react-native";
 import colors from "../../shared/theme/colors";
 import { Actions } from "react-native-router-flux";
@@ -17,34 +17,37 @@ import { scaledFontSize, scaledVertical } from "../../shared/helper/scale.helper
 class SigninComponent extends React.Component<any, any> {
   render() {
     return (
-      <SafeAreaView style={styles.mainContainer}>
-        <StatusBar backgroundColor={colors.flickrBlue} barStyle={'light-content'} />
+      <>
+        <SafeAreaView style={{ flex: 0, backgroundColor: colors.flickrBlue }} />
+        <SafeAreaView style={styles.mainContainer}>
+          <StatusBar backgroundColor={colors.flickrBlue} barStyle={'light-content'} />
 
-        <View
-          style={styles.topContainer}
-        >
-          <LogoComponent 
-            source={images.img_logo_flickr}
-          />
-        </View>
-
-        <View
-          style={styles.bottomContainer}
-        >
-          <TouchableOpacity
-            onPress={() => {
-              Actions.push('HomePage');
-            }}
-            style={styles.buttonContainer}
+          <View
+            style={styles.topContainer}
           >
-            <Text
-              style={styles.buttonText}
+            <LogoComponent
+              source={images.img_logo_flickr}
+            />
+          </View>
+
+          <View
+            style={styles.bottomContainer}
+          >
+            <TouchableOpacity
+              onPress={() => {
+                Actions.push('HomePage');
+              }}
+              style={styles.buttonContainer}
             >
-              {`Get Started`}
-            </Text>
-          </TouchableOpacity>
-        </View>
-      </SafeAreaView>
+              <Text
+                style={styles.buttonText}
+              >
+                {`Get Started`}
+              </Text>
+            </TouchableOpacity>
+          </View>
+        </SafeAreaView>
+      </>
     );
   }
 }

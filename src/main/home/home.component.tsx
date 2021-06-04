@@ -31,57 +31,60 @@ class HomeComponent extends React.Component<any, any> {
 
   render() {
     return (
-      <SafeAreaView style={styles.mainContainer}>
-        <View
-          style={styles.headerContainer}
-        >
-          <LogoComponent
-            source={images.img_logo_flickr}
-          />
+      <>
+        <SafeAreaView style={styles.mainContainer}>
+          <View
+            style={styles.headerContainer}
+          >
+            <LogoComponent
+              source={images.img_logo_flickr}
+            />
+
+            <View
+              style={styles.headerButtonContainer}
+            >
+              <IconButtonComponent
+                source={icons.ic_download}
+                onPress={() => {
+
+                }}
+                width={scaledVertical(44)}
+                height={scaledVertical(44)}
+                style={{ marginHorizontal: scaledHorizontal(10) }}
+              />
+
+              <IconButtonComponent
+                source={icons.ic_setting}
+                onPress={() => {
+
+                }}
+                style={{ marginHorizontal: scaledHorizontal(10) }}
+              />
+            </View>
+          </View>
 
           <View
-            style={styles.headerButtonContainer}
+            style={styles.contentContainer}
           >
-            <IconButtonComponent
-              source={icons.ic_download}
-              onPress={() => {
+            <HomeInputSection />
 
-              }}
-              width={scaledVertical(44)}
-              height={scaledVertical(44)}
-              style={{ marginHorizontal: scaledHorizontal(10) }}
-            />
-
-            <IconButtonComponent
-              source={icons.ic_setting}
-              onPress={() => {
-
-              }}
-              style={{ marginHorizontal: scaledHorizontal(10) }}
-            />
+            <View style={{ flex: 1, width: '100%', paddingTop: scaledVertical(20) }}>
+              {this._homeStore.isLoading ?
+                <ActivityIndicator
+                  size={'large'}
+                  color={colors.flickrPink}
+                  style={{
+                    marginTop: scaledVertical(100)
+                  }}
+                />
+                :
+                <HomeListSection />
+              }
+            </View>
           </View>
-        </View>
-
-        <View
-          style={styles.contentContainer}
-        >
-          <HomeInputSection />
-
-          <View style={{ flex: 1, width: '100%', paddingTop: scaledVertical(20) }}>
-            {this._homeStore.isLoading ?
-              <ActivityIndicator
-                size={'large'}
-                color={colors.flickrPink}
-                style={{
-                  marginTop: scaledVertical(100)
-                }}
-              />
-              :
-              <HomeListSection />
-            }
-          </View>
-        </View>
-      </SafeAreaView>
+        </SafeAreaView>
+        <SafeAreaView style={{ flex: 0, backgroundColor: colors.primary }} />
+      </>
     )
   }
 }

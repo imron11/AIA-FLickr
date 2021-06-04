@@ -1,12 +1,16 @@
 import React from "react";
 import {
   Dimensions,
+  View,
   StyleSheet,
-  View
+  Text
 } from "react-native";
 import Modal from "react-native-modal";
-import { scaledHorizontal, scaledVertical } from "../../helper/scale.helper";
+import { SafeAreaView } from "react-native-safe-area-context";
+import icons from "../../../asset/icons";
+import { scaledFontSize, scaledHorizontal, scaledVertical } from "../../helper/scale.helper";
 import colors from "../../theme/colors";
+import IconButtonComponent from "../button/icon.button";
 
 interface ModalProps {
   coverScreen?: boolean;
@@ -22,6 +26,7 @@ interface ModalProps {
   rightColumn?: any;
   style?: any;
   footerRadius?: boolean;
+  title?: string;
 }
 
 const BottomSlideModal = (props: ModalProps) => {
@@ -31,34 +36,74 @@ const BottomSlideModal = (props: ModalProps) => {
   }
 
   return (
-    <>
-      <Modal
-        isVisible={props.isOpen}
-        onBackdropPress={onClosed}
-        onBackButtonPress={onClosed}
-        animationIn={'slideInUp'}
-        animationOut={'slideOutDown'}
-        animationInTiming={800}
-        animationOutTiming={800}
-        backdropColor={'transparent'}
-        style={{
-          margin: 0,
-          justifyContent: "flex-end"
-        }}
-      >
+    <Modal
+      isVisible={props.isOpen}
+      // onBackdropPress={onClosed}
+      onBackButtonPress={onClosed}
+      animationIn={'slideInUp'}
+      animationOut={'slideOutDown'}
+      animationInTiming={800}
+      animationOutTiming={800}
+      backdropColor={colors.flickrBlue}
+      backdropOpacity={1}
+      style={{
+        margin: 0,
+        justifyContent: "flex-end"
+      }}
+    >
         <View
-          style={{
-            backgroundColor: "white",
-            height: Dimensions.get('screen').height * 0.8,
-            borderTopLeftRadius: 25,
-            borderTopRightRadius: 25
-          }}
+          style={[
+            styles.modalContainer,
+            {
+              borderTopLeftRadius: 25,
+              borderTopRightRadius: 25,
+            }]
+          }
         >
+          <View
+            style={
+              styles.titleContainer
+            }
+          >
+            <IconButtonComponent
+              source={icons.ic_back}
+              onPress={() => {
+                onClosed();
+              }}
+              width={scaledVertical(32)}
+              height={scaledVertical(32)}
+              tintColor={colors.flickrBlue}
+              style={{ marginRight: scaledHorizontal(10) }}
+            />
+
+            <Text
+            style={styles.titleText}
+            >
+              {props.title}
+            </Text>
+          </View>
           {props.children}
         </View>
-      </Modal>
-    </>
+    </Modal>
   );
 }
+
+const styles = StyleSheet.create({
+  modalContainer: {
+    backgroundColor: "white",
+    height: Dimensions.get("screen").height * 0.9
+  },
+  titleContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginVertical: scaledVertical(28),
+    paddingHorizontal: scaledHorizontal(20),
+  },
+  titleText: {
+    color: colors.border,
+    fontWeight: "700",
+    fontSize: scaledFontSize(32)
+  }
+});
 
 export default BottomSlideModal;
