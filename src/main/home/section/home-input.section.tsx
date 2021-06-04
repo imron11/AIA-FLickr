@@ -1,7 +1,6 @@
 import React from "react";
 import { 
-  StyleSheet, 
-  Text,
+  StyleSheet,
   View 
 } from "react-native";
 import { observer } from "mobx-react";

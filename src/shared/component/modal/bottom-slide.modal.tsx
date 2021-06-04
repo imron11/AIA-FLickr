@@ -6,7 +6,6 @@ import {
   Text
 } from "react-native";
 import Modal from "react-native-modal";
-import { SafeAreaView } from "react-native-safe-area-context";
 import icons from "../../../asset/icons";
 import { scaledFontSize, scaledHorizontal, scaledVertical } from "../../helper/scale.helper";
 import colors from "../../theme/colors";
