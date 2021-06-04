@@ -32,7 +32,8 @@ class HomeStore {
           id: `image${i+1}`,
           url: _.get(response[i], 'media.m'),
           width,
-          height
+          height,
+          link: _.get(response[i], 'link')
         });
       });
     }

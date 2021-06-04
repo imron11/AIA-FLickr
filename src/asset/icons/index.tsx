@@ -4,7 +4,8 @@ const icons = {
     ic_refresh: require("./ic_refresh.png"),
     ic_download: require("./ic_download.png"),
     ic_web: require("./ic_web.png"),
-    ic_love: require("./ic_love.png")
+    ic_love: require("./ic_love.png"),
+    ic_back: require("./ic_back.png")
 }
 
 export default icons;

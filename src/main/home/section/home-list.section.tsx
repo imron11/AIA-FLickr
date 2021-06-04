@@ -14,6 +14,8 @@ import colors from "../../../shared/theme/colors";
 import _ from "lodash";
 import IconButtonComponent from "../../../shared/component/button/icon.button";
 import icons from "../../../asset/icons";
+import BottomSlideModal from "../../../shared/component/modal/bottom-slide.modal";
+import { WebView } from 'react-native-webview';
 
 @observer
 class HomeListSection extends React.Component<any, any> {
@@ -21,7 +23,9 @@ class HomeListSection extends React.Component<any, any> {
   private _homeStore = container.resolve(HomeStore);
 
   state = {
-    imageWidth: 0
+    imageWidth: 0,
+    isModalVisible: false,
+    selectedUrl: ''
   }
 
   renderCard = ({ index, item }) => {
@@ -72,7 +76,10 @@ class HomeListSection extends React.Component<any, any> {
             <IconButtonComponent
               source={icons.ic_web}
               onPress={() => {
-
+                this.setState({
+                  isModalVisible: true,
+                  selectedUrl: _.get(item, 'link')
+                });
               }}
               width={scaledVertical(24)}
               height={scaledVertical(24)}
@@ -118,6 +125,17 @@ class HomeListSection extends React.Component<any, any> {
             paddingBottom: scaledVertical(50)
           }}
         />
+
+        <BottomSlideModal
+          isOpen={this.state.isModalVisible}
+          onClosed={() => {
+            this.setState({
+              isModalVisible: false
+            });
+          }}
+        >
+          <WebView source={{ uri: this.state.selectedUrl }} />
+        </BottomSlideModal>
       </>
     )
   }

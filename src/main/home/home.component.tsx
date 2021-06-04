@@ -103,7 +103,8 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary,
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,
-    padding: scaledVertical(30)
+    paddingTop: scaledVertical(30),
+    paddingHorizontal: scaledHorizontal(30)
   },
   headerButtonContainer: {
     flexDirection: 'row',
