@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import icons from "../../../asset/icons/index";
 import colors from '../../theme/colors';
+import { scaledFontSize, scaledHorizontal, scaledVertical } from "../../helper/scale.helper";
 
 interface Props {
     placeholder?: string;
@@ -45,7 +46,7 @@ const TextInputComponent = (props: Props) => {
             <TextInput
                 value={props.value}
                 secureTextEntry={props.secureTextEntry}
-                style={{ flex: 1, color: colors.flickrBlue, fontSize: 12 }}
+                style={{ flex: 1, color: colors.flickrBlue, fontSize: scaledFontSize(24) }}
                 placeholder={props.placeholder}
                 placeholderTextColor={props.placeholderTextColor ? props.placeholderTextColor : colors.placeholder}
                 autoCapitalize={props.autoCapitalize}
@@ -61,8 +62,8 @@ const TextInputComponent = (props: Props) => {
                         source={icons.ic_clear}
                         resizeMode={'stretch'}
                         style={{
-                            width: 20,
-                            height: 20,
+                            width: scaledVertical(32),
+                            height: scaledVertical(32),
                             tintColor: colors.flickrPink
                         }}
                     />
@@ -81,8 +82,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         borderRadius: 20,
-        paddingHorizontal: 15,
-        height: 40,
+        paddingHorizontal: scaledHorizontal(15),
+        height: scaledVertical(72),
         borderWidth: 1
     }
 });

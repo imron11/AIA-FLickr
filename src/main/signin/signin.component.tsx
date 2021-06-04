@@ -12,6 +12,7 @@ import colors from "../../shared/theme/colors";
 import { Actions } from "react-native-router-flux";
 import images from "../../asset/images";
 import LogoComponent from '../../shared/component/logo';
+import { scaledFontSize, scaledVertical } from "../../shared/helper/scale.helper";
 
 class SigninComponent extends React.Component<any, any> {
   render() {
@@ -55,7 +56,7 @@ const styles = StyleSheet.create({
   },
   topContainer: {
     flex: 1,
-    padding: 30,
+    padding: scaledVertical(40),
     backgroundColor: colors.flickrBlue,
     borderBottomRightRadius: 300
   },
@@ -63,11 +64,11 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'flex-end',
-    padding: 20
+    padding: scaledVertical(30)
   },
   buttonContainer: {
     width: '100%',
-    height: 70,
+    height: scaledVertical(100),
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 35,
@@ -76,7 +77,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: 'white',
     fontWeight: 'bold',
-    fontSize: 20
+    fontSize: scaledFontSize(32)
   }
 });
 

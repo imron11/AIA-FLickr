@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Dimensions,
   SafeAreaView,
   StyleSheet,
   View
@@ -13,6 +14,7 @@ import images from '../../asset/images';
 import icons from '../../asset/icons';
 import IconButtonComponent from '../../shared/component/button/icon.button';
 import TextInputComponent from "../../shared/component/input/text.input";
+import { scaledVertical } from "../../shared/helper/scale.helper";
 
 @observer
 class HomeComponent extends React.Component<any, any> {
@@ -63,8 +65,8 @@ class HomeComponent extends React.Component<any, any> {
 
               }}
               tintColor={colors.flickrBlue}
-              width={24}
-              height={24}
+              width={scaledVertical(40)}
+              height={scaledVertical(40)}
               style={{ marginLeft: 16 }}
             />
           </View>
@@ -82,18 +84,18 @@ const styles = StyleSheet.create({
     backgroundColor: colors.flickrBlue
   },
   headerContainer: {
-    height: 100,
+    height: Dimensions.get("screen").height * 0.13,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: 20
+    padding: scaledVertical(30)
   },
   contentContainer: {
     flex: 1,
     backgroundColor: colors.primary,
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,
-    padding: 20
+    padding: scaledVertical(30)
   },
   inputContainer: {
     flexDirection: 'row',

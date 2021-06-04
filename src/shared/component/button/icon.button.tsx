@@ -3,6 +3,7 @@ import {
     Image,
     TouchableOpacity
 } from "react-native";
+import { scaledVertical } from "../../helper/scale.helper";
 
 interface iconButtonProps {
     onPress?: () => void;
@@ -26,8 +27,8 @@ const IconButtonComponent = (props: iconButtonProps) => {
                     source={props.source}
                     resizeMode={'stretch'}
                     style={{
-                        width: props.width ? props.width : 30,
-                        height: props.height ? props.height : 30,
+                        width: props.width ? props.width : scaledVertical(48),
+                        height: props.height ? props.height : scaledVertical(48),
                         tintColor: props.tintColor ? props.tintColor : "white"
                     }}
                 />
