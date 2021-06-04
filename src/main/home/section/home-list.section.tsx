@@ -12,6 +12,8 @@ import { container } from "tsyringe";
 import { scaledHorizontal, scaledVertical } from "../../../shared/helper/scale.helper";
 import colors from "../../../shared/theme/colors";
 import _ from "lodash";
+import IconButtonComponent from "../../../shared/component/button/icon.button";
+import icons from "../../../asset/icons";
 
 @observer
 class HomeListSection extends React.Component<any, any> {
@@ -55,6 +57,47 @@ class HomeListSection extends React.Component<any, any> {
             height: actualWidth * (this.state.imageWidth / actualHeight)
           }}
         />
+
+        <View style={styles.iconButtonContainer}>
+
+          <View
+            style={[
+              styles.iconContainer,
+              {
+                backgroundColor: colors.flickrBlue,
+                marginRight: scaledHorizontal(10)
+              }
+            ]}
+          >
+            <IconButtonComponent
+              source={icons.ic_web}
+              onPress={() => {
+
+              }}
+              width={scaledVertical(24)}
+              height={scaledVertical(24)}
+            />
+          </View>
+
+          <View
+            style={[
+              styles.iconContainer,
+              {
+                backgroundColor: colors.border
+              }
+            ]}
+          >
+            <IconButtonComponent
+              source={icons.ic_love}
+              onPress={() => {
+
+              }}
+              width={scaledVertical(24)}
+              height={scaledVertical(24)}
+            />
+          </View>
+
+        </View>
       </View>
     );
   }
@@ -71,7 +114,6 @@ class HomeListSection extends React.Component<any, any> {
           renderItem={this.renderCard}
           numColumns={2}
           contentContainerStyle={{
-
             paddingTop: scaledVertical(20),
             paddingBottom: scaledVertical(50)
           }}
@@ -92,6 +134,17 @@ const styles = StyleSheet.create({
     flex: 1 / 2,
     marginHorizontal: scaledHorizontal(10),
     backgroundColor: 'white',
+  },
+  iconButtonContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    position: 'absolute',
+    top: scaledVertical(15),
+    right: scaledHorizontal(15),
+  },
+  iconContainer: {
+    padding: scaledVertical(15),
+    borderRadius: 35,
   }
 });
 

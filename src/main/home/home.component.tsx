@@ -14,7 +14,7 @@ import LogoComponent from '../../shared/component/logo';
 import images from '../../asset/images';
 import icons from '../../asset/icons';
 import IconButtonComponent from '../../shared/component/button/icon.button';
-import { scaledVertical } from "../../shared/helper/scale.helper";
+import { scaledHorizontal, scaledVertical } from "../../shared/helper/scale.helper";
 import HomeInputSection from './section/home-input.section';
 import _ from "lodash";
 import HomeListSection from './section/home-list.section';
@@ -39,12 +39,27 @@ class HomeComponent extends React.Component<any, any> {
             source={images.img_logo_flickr}
           />
 
-          <IconButtonComponent
-            source={icons.ic_setting}
-            onPress={() => {
+          <View
+            style={styles.headerButtonContainer}
+          >
+            <IconButtonComponent
+              source={icons.ic_download}
+              onPress={() => {
 
-            }}
-          />
+              }}
+              width={scaledVertical(44)}
+              height={scaledVertical(44)}
+              style={{ marginHorizontal: scaledHorizontal(10) }}
+            />
+
+            <IconButtonComponent
+              source={icons.ic_setting}
+              onPress={() => {
+
+              }}
+              style={{ marginHorizontal: scaledHorizontal(10) }}
+            />
+          </View>
         </View>
 
         <View
@@ -90,6 +105,10 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 25,
     padding: scaledVertical(30)
   },
+  headerButtonContainer: {
+    flexDirection: 'row',
+    alignItems: 'center'
+  }
 });
 
 export default HomeComponent;
