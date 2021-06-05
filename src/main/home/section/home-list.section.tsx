@@ -1,8 +1,6 @@
 import React from "react";
 import {
-  ActivityIndicator,
-  FlatList,
-  Image,
+  Animated,
   StyleSheet,
   View
 } from "react-native";
@@ -16,6 +14,8 @@ import IconButtonComponent from "../../../shared/component/button/icon.button";
 import icons from "../../../asset/icons";
 import BottomSlideModal from "../../../shared/component/modal/bottom-slide.modal";
 import { WebView } from 'react-native-webview';
+import MasonryList from '@react-native-seoul/masonry-list';
+import AutoHeightImage from 'react-native-auto-height-image';
 
 @observer
 class HomeListSection extends React.Component<any, any> {
@@ -25,26 +25,13 @@ class HomeListSection extends React.Component<any, any> {
   state = {
     imageWidth: 0,
     isModalVisible: false,
-    selectedUrl: ''
+    selectedUrl: '',
   }
 
-  renderCard = ({ index, item }) => {
-
-    const actualWidth = _.get(item, 'width');
-    const actualHeight = _.get(item, 'height');
-
-    if (this._homeStore.isLoading) {
-      return (
-        <ActivityIndicator
-          size={'small'}
-          color={colors.flickrPink}
-        />
-      );
-    }
-
+  renderCard = ({ item }) => {
     return (
       <View
-        key={index}
+        key={item.link}
         style={styles.imageContainer}
         onLayout={(e) => {
           const { width } = e.nativeEvent.layout;
@@ -53,13 +40,11 @@ class HomeListSection extends React.Component<any, any> {
           })
         }}
       >
-        <Image
+        <AutoHeightImage
           source={{ uri: _.get(item, 'url') }}
-          resizeMode={'cover'}
-          style={{
-            width: "100%",
-            height: actualWidth * (this.state.imageWidth / actualHeight)
-          }}
+          width={this.state.imageWidth}
+          animated
+          resizeMode={"cover"}
         />
 
         <View style={styles.iconButtonContainer}>
@@ -113,8 +98,8 @@ class HomeListSection extends React.Component<any, any> {
     const dataImages = this._homeStore.dataImages;
     return (
       <>
-        <FlatList
-          data={dataImages}
+        <MasonryList
+          data={dataImages.slice()}
           onRefresh={() => { this._homeStore.doRefresh() }}
           refreshing={this._homeStore.isLoading}
           keyExtractor={item => item.id}
@@ -130,7 +115,8 @@ class HomeListSection extends React.Component<any, any> {
           isOpen={this.state.isModalVisible}
           onClosed={() => {
             this.setState({
-              isModalVisible: false
+              isModalVisible: false,
+              selectedUrl: ''
             });
           }}
           title={"Detail Image"}
@@ -147,10 +133,7 @@ const styles = StyleSheet.create({
   imageContainer: {
     borderRadius: 15,
     overflow: 'hidden',
-    justifyContent: "center",
-    alignItems: "center",
     marginVertical: scaledVertical(10),
-    flex: 1 / 2,
     marginHorizontal: scaledHorizontal(10),
     backgroundColor: 'white',
   },

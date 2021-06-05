@@ -72,7 +72,7 @@ const BottomSlideModal = (props: ModalProps) => {
               width={scaledVertical(32)}
               height={scaledVertical(32)}
               tintColor={colors.flickrBlue}
-              style={{ marginRight: scaledHorizontal(10) }}
+              style={{ marginRight: scaledHorizontal(15) }}
             />
 
             <Text
@@ -99,9 +99,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: scaledHorizontal(20),
   },
   titleText: {
-    color: colors.border,
+    color: colors.flickrPink,
     fontWeight: "700",
-    fontSize: scaledFontSize(32)
+    fontSize: scaledFontSize(36)
   }
 });
 

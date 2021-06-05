@@ -59,7 +59,7 @@ class HomeInputSection extends React.Component<any, any> {
           onPress={() => {
             this._homeStore.doRefresh();
           }}
-          tintColor={colors.flickrBlue}
+          tintColor={colors.flickrPink}
           width={scaledVertical(40)}
           height={scaledVertical(40)}
           style={{ marginHorizontal: scaledHorizontal(28) }}
