@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     },
     image: {
         width: scaledHorizontal(300),
-        height: scaledVertical(300),
+        height: scaledVertical(360),
         tintColor: colors.border,
         marginBottom: scaledVertical(16)
     },

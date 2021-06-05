@@ -21,7 +21,7 @@ class BootComponent extends React.Component<any, any> {
             } else {
                 Actions.reset('SigninPage');
             }
-        }, 5000);
+        }, 3000);
     }
 
     render() {

@@ -29,6 +29,7 @@ class HomeComponent extends React.Component<any, any> {
 
   async componentDidMount() {
     this._homeStore.tags = "";
+    this._homeStore.dataSavedImages = await getAllSavedImage();
     await this._homeStore.getListImage();
   }
 
@@ -40,6 +41,7 @@ class HomeComponent extends React.Component<any, any> {
 
   render() {
     const dataSavedImages = this._homeStore.dataSavedImages;
+    const imageLength = dataSavedImages.length;
     return (
       <>
         <SafeAreaView style={styles.mainContainer}>
@@ -62,7 +64,7 @@ class HomeComponent extends React.Component<any, any> {
                 width={scaledVertical(44)}
                 height={scaledVertical(44)}
                 style={{ marginHorizontal: scaledHorizontal(10) }}
-                badgeLength={dataSavedImages.length}
+                badgeLength={imageLength}
               />
             </View>
           </View>
