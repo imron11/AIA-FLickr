@@ -21,15 +21,14 @@ class BootComponent extends React.Component<any, any> {
             } else {
                 Actions.reset('SigninPage');
             }
-        }, 3000);
-
+        }, 5000);
     }
 
     render() {
         return (
             <>
                 <SafeAreaView style={{ flex: 0, backgroundColor: colors.flickrBlue }} />
-                <SafeAreaView style={{ flex: 1 }}>
+                <SafeAreaView style={{ flex: 1, backgroundColor: colors.flickrBlue }}>
                     <StatusBar backgroundColor={colors.flickrBlue} barStyle={'light-content'} />
                     <View
                         style={styles.container}

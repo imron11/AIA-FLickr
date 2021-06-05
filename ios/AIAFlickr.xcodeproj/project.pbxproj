@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* AIAFlickrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AIAFlickrTests.m */; };
-		02D89B1C61B04CDEA213D0AC /* libPods-AIAFlickr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7951D0B72D54918488A4CE5 /* libPods-AIAFlickr.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		68B7CF6539B45F900477C8BA /* libPods-AIAFlickr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FF81481095B0A20EFAD3041 /* libPods-AIAFlickr.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		DF7452529CEDA2EC87FF2A5A /* libPods-AIAFlickr-AIAFlickrTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12F267B777DCA7A029656866 /* libPods-AIAFlickr-AIAFlickrTests.a */; };
+		D98A74661E1D982E4922BA55 /* libPods-AIAFlickr-AIAFlickrTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ED8802DBA09EB969590A005 /* libPods-AIAFlickr-AIAFlickrTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,20 +30,20 @@
 		00E356EE1AD99517003FC87E /* AIAFlickrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AIAFlickrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* AIAFlickrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIAFlickrTests.m; sourceTree = "<group>"; };
-		070BFA66F4A78A061321163B /* Pods-AIAFlickr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIAFlickr.debug.xcconfig"; path = "Target Support Files/Pods-AIAFlickr/Pods-AIAFlickr.debug.xcconfig"; sourceTree = "<group>"; };
-		12F267B777DCA7A029656866 /* libPods-AIAFlickr-AIAFlickrTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AIAFlickr-AIAFlickrTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		13549E2C9C799251D649D63D /* Pods-AIAFlickr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIAFlickr.release.xcconfig"; path = "Target Support Files/Pods-AIAFlickr/Pods-AIAFlickr.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* AIAFlickr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIAFlickr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = AIAFlickr/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = AIAFlickr/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = AIAFlickr/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AIAFlickr/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AIAFlickr/main.m; sourceTree = "<group>"; };
+		1EE0E535B2B9A6F3D49A9A3B /* Pods-AIAFlickr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIAFlickr.debug.xcconfig"; path = "Target Support Files/Pods-AIAFlickr/Pods-AIAFlickr.debug.xcconfig"; sourceTree = "<group>"; };
+		59E4988BE6065CD87277D4BF /* Pods-AIAFlickr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIAFlickr.release.xcconfig"; path = "Target Support Files/Pods-AIAFlickr/Pods-AIAFlickr.release.xcconfig"; sourceTree = "<group>"; };
+		5ED8802DBA09EB969590A005 /* libPods-AIAFlickr-AIAFlickrTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AIAFlickr-AIAFlickrTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FF81481095B0A20EFAD3041 /* libPods-AIAFlickr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AIAFlickr.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = AIAFlickr/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		892DDB20D0588870EC711084 /* Pods-AIAFlickr-AIAFlickrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIAFlickr-AIAFlickrTests.debug.xcconfig"; path = "Target Support Files/Pods-AIAFlickr-AIAFlickrTests/Pods-AIAFlickr-AIAFlickrTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B7951D0B72D54918488A4CE5 /* libPods-AIAFlickr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AIAFlickr.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8299A9C84028BA8E4477C678 /* Pods-AIAFlickr-AIAFlickrTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIAFlickr-AIAFlickrTests.release.xcconfig"; path = "Target Support Files/Pods-AIAFlickr-AIAFlickrTests/Pods-AIAFlickr-AIAFlickrTests.release.xcconfig"; sourceTree = "<group>"; };
+		DCF590479DE69E67747D7861 /* Pods-AIAFlickr-AIAFlickrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIAFlickr-AIAFlickrTests.debug.xcconfig"; path = "Target Support Files/Pods-AIAFlickr-AIAFlickrTests/Pods-AIAFlickr-AIAFlickrTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		FE95D1EBD65F4F6919FD7109 /* Pods-AIAFlickr-AIAFlickrTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIAFlickr-AIAFlickrTests.release.xcconfig"; path = "Target Support Files/Pods-AIAFlickr-AIAFlickrTests/Pods-AIAFlickr-AIAFlickrTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF7452529CEDA2EC87FF2A5A /* libPods-AIAFlickr-AIAFlickrTests.a in Frameworks */,
+				D98A74661E1D982E4922BA55 /* libPods-AIAFlickr-AIAFlickrTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02D89B1C61B04CDEA213D0AC /* libPods-AIAFlickr.a in Frameworks */,
+				68B7CF6539B45F900477C8BA /* libPods-AIAFlickr.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				B7951D0B72D54918488A4CE5 /* libPods-AIAFlickr.a */,
-				12F267B777DCA7A029656866 /* libPods-AIAFlickr-AIAFlickrTests.a */,
+				6FF81481095B0A20EFAD3041 /* libPods-AIAFlickr.a */,
+				5ED8802DBA09EB969590A005 /* libPods-AIAFlickr-AIAFlickrTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,10 +140,10 @@
 		F55041F07CD805B3C82E0B1B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				070BFA66F4A78A061321163B /* Pods-AIAFlickr.debug.xcconfig */,
-				13549E2C9C799251D649D63D /* Pods-AIAFlickr.release.xcconfig */,
-				892DDB20D0588870EC711084 /* Pods-AIAFlickr-AIAFlickrTests.debug.xcconfig */,
-				FE95D1EBD65F4F6919FD7109 /* Pods-AIAFlickr-AIAFlickrTests.release.xcconfig */,
+				1EE0E535B2B9A6F3D49A9A3B /* Pods-AIAFlickr.debug.xcconfig */,
+				59E4988BE6065CD87277D4BF /* Pods-AIAFlickr.release.xcconfig */,
+				DCF590479DE69E67747D7861 /* Pods-AIAFlickr-AIAFlickrTests.debug.xcconfig */,
+				8299A9C84028BA8E4477C678 /* Pods-AIAFlickr-AIAFlickrTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -155,12 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AIAFlickrTests" */;
 			buildPhases = (
-				281A225767A45E8CDD3E7F10 /* [CP] Check Pods Manifest.lock */,
+				6572846A4C05DAFAEC9910B9 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				1BACC817ECA540872A9DBA68 /* [CP] Embed Pods Frameworks */,
-				289670371B9FCAC97DFE1B8C /* [CP] Copy Pods Resources */,
+				1F4F9A4DDC503F7D3AD41AD8 /* [CP] Embed Pods Frameworks */,
+				5997DA788B100DDD16ACDEEC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,14 +176,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "AIAFlickr" */;
 			buildPhases = (
-				7A34BE6840D03A82ACBEBA49 /* [CP] Check Pods Manifest.lock */,
+				55931E33130D8ADCB52CEA8F /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				F6B7A2AD42195D2AFD31F04D /* [CP] Embed Pods Frameworks */,
-				480173C183B2F09FC94B0FE7 /* [CP] Copy Pods Resources */,
+				6F73AAC3ECACBFE604D8FD61 /* [CP] Embed Pods Frameworks */,
+				791A4414EA06079B46B88465 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,7 +264,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		1BACC817ECA540872A9DBA68 /* [CP] Embed Pods Frameworks */ = {
+		1F4F9A4DDC503F7D3AD41AD8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -281,63 +281,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AIAFlickr-AIAFlickrTests/Pods-AIAFlickr-AIAFlickrTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		281A225767A45E8CDD3E7F10 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AIAFlickr-AIAFlickrTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		289670371B9FCAC97DFE1B8C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AIAFlickr-AIAFlickrTests/Pods-AIAFlickr-AIAFlickrTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AIAFlickr-AIAFlickrTests/Pods-AIAFlickr-AIAFlickrTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AIAFlickr-AIAFlickrTests/Pods-AIAFlickr-AIAFlickrTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		480173C183B2F09FC94B0FE7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AIAFlickr/Pods-AIAFlickr-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AIAFlickr/Pods-AIAFlickr-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AIAFlickr/Pods-AIAFlickr-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7A34BE6840D03A82ACBEBA49 /* [CP] Check Pods Manifest.lock */ = {
+		55931E33130D8ADCB52CEA8F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -359,7 +303,46 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F6B7A2AD42195D2AFD31F04D /* [CP] Embed Pods Frameworks */ = {
+		5997DA788B100DDD16ACDEEC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AIAFlickr-AIAFlickrTests/Pods-AIAFlickr-AIAFlickrTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AIAFlickr-AIAFlickrTests/Pods-AIAFlickr-AIAFlickrTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AIAFlickr-AIAFlickrTests/Pods-AIAFlickr-AIAFlickrTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6572846A4C05DAFAEC9910B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AIAFlickr-AIAFlickrTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F73AAC3ECACBFE604D8FD61 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -374,6 +357,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AIAFlickr/Pods-AIAFlickr-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		791A4414EA06079B46B88465 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AIAFlickr/Pods-AIAFlickr-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AIAFlickr/Pods-AIAFlickr-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AIAFlickr/Pods-AIAFlickr-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -428,7 +428,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 892DDB20D0588870EC711084 /* Pods-AIAFlickr-AIAFlickrTests.debug.xcconfig */;
+			baseConfigurationReference = DCF590479DE69E67747D7861 /* Pods-AIAFlickr-AIAFlickrTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -455,7 +455,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE95D1EBD65F4F6919FD7109 /* Pods-AIAFlickr-AIAFlickrTests.release.xcconfig */;
+			baseConfigurationReference = 8299A9C84028BA8E4477C678 /* Pods-AIAFlickr-AIAFlickrTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -479,12 +479,12 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 070BFA66F4A78A061321163B /* Pods-AIAFlickr.debug.xcconfig */;
+			baseConfigurationReference = 1EE0E535B2B9A6F3D49A9A3B /* Pods-AIAFlickr.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VDR3F52HW3;
+				DEVELOPMENT_TEAM = TMQP5P7Z89;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = AIAFlickr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -507,12 +507,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13549E2C9C799251D649D63D /* Pods-AIAFlickr.release.xcconfig */;
+			baseConfigurationReference = 59E4988BE6065CD87277D4BF /* Pods-AIAFlickr.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VDR3F52HW3;
+				DEVELOPMENT_TEAM = TMQP5P7Z89;
 				INFOPLIST_FILE = AIAFlickr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

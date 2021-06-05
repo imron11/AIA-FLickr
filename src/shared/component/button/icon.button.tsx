@@ -7,7 +7,6 @@ import {
     View
 } from "react-native";
 import { scaledFontSize, scaledVertical } from "../../helper/scale.helper";
-import colors from "../../theme/colors";
 
 interface iconButtonProps {
     onPress?: () => void;
