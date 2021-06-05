@@ -12,8 +12,19 @@ import { Actions } from "react-native-router-flux";
 import images from "../../asset/images";
 import LogoComponent from '../../shared/component/logo';
 import { scaledFontSize, scaledVertical } from "../../shared/helper/scale.helper";
+import realm, { getAllSavedImage, addImage, deleteImageById } from "../../database/flickr-image.database";
 
 class SigninComponent extends React.Component<any, any> {
+
+  componentDidMount() {
+    this.getImage();  
+  }
+
+  getImage = async () => {
+    const images = await getAllSavedImage();
+    console.log("images", images);
+  }
+
   render() {
     return (
       <>
@@ -35,6 +46,9 @@ class SigninComponent extends React.Component<any, any> {
             <TouchableOpacity
               onPress={() => {
                 Actions.push('HomePage');
+                // addImage('Foster Cat, Sandy', 'https://live.staticflickr.com/65535/51226621010_b2d71507b1_m.jpg');
+                // deleteImageById(2);
+                // this.getImage();
               }}
               style={styles.buttonContainer}
             >

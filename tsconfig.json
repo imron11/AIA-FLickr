@@ -35,7 +35,7 @@
     "AppErrorHandler.ts",
     "AppContainer.tsx",
     "AppManager.tsx"
-  ],
+, "src/database/flickr-image.database.js"  ],
   "exclude": [
     "android",
     "ios",
