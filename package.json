@@ -9,7 +9,9 @@
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "debug:menu": "adb shell input keyevent 82",
-    "reset:pod": "cd ios/ && rm -rf Pods/ Podfile.lock && pod deintegrate && pod install && cd .."
+    "reset:pod": "cd ios/ && rm -rf Pods/ Podfile.lock && pod deintegrate && pod install && cd ..",
+    "clean": "cd android/ && ./gradlew clean && cd ..",
+    "build:android": "cd android/ && ./gradlew assembleRelease && cd .."
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.15.5",
