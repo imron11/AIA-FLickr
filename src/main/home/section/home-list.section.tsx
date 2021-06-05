@@ -1,21 +1,17 @@
 import React from "react";
 import {
-  Animated,
   StyleSheet,
   View
 } from "react-native";
 import { observer } from "mobx-react";
 import HomeStore from "../home.store";
 import { container } from "tsyringe";
-import { scaledHorizontal, scaledVertical } from "../../../shared/helper/scale.helper";
-import colors from "../../../shared/theme/colors";
+import { scaledVertical } from "../../../shared/helper/scale.helper";
 import _ from "lodash";
-import IconButtonComponent from "../../../shared/component/button/icon.button";
-import icons from "../../../asset/icons";
 import BottomSlideModal from "../../../shared/component/modal/bottom-slide.modal";
 import { WebView } from 'react-native-webview';
 import MasonryList from '@react-native-seoul/masonry-list';
-import AutoHeightImage from 'react-native-auto-height-image';
+import ImageCardComponent from "../../../shared/component/card/image.card";
 
 @observer
 class HomeListSection extends React.Component<any, any> {
@@ -30,67 +26,18 @@ class HomeListSection extends React.Component<any, any> {
 
   renderCard = ({ item }) => {
     return (
-      <View
-        key={item.link}
-        style={styles.imageContainer}
-        onLayout={(e) => {
-          const { width } = e.nativeEvent.layout;
+      <ImageCardComponent 
+        item={item}
+        onPressWeb={(link) => {
           this.setState({
-            imageWidth: width
+            isModalVisible: true,
+            selectedUrl: link
           })
         }}
-      >
-        <AutoHeightImage
-          source={{ uri: _.get(item, 'url') }}
-          width={this.state.imageWidth}
-          animated
-          resizeMode={"cover"}
-        />
-
-        <View style={styles.iconButtonContainer}>
-
-          <View
-            style={[
-              styles.iconContainer,
-              {
-                backgroundColor: colors.flickrBlue,
-                marginRight: scaledHorizontal(10)
-              }
-            ]}
-          >
-            <IconButtonComponent
-              source={icons.ic_web}
-              onPress={() => {
-                this.setState({
-                  isModalVisible: true,
-                  selectedUrl: _.get(item, 'link')
-                });
-              }}
-              width={scaledVertical(24)}
-              height={scaledVertical(24)}
-            />
-          </View>
-
-          <View
-            style={[
-              styles.iconContainer,
-              {
-                backgroundColor: colors.border
-              }
-            ]}
-          >
-            <IconButtonComponent
-              source={icons.ic_love}
-              onPress={() => {
-
-              }}
-              width={scaledVertical(24)}
-              height={scaledVertical(24)}
-            />
-          </View>
-
-        </View>
-      </View>
+        onPressLove={(selectedItem) => {
+          console.log(selectedItem);
+        }}
+      />
     );
   }
 
@@ -130,24 +77,7 @@ class HomeListSection extends React.Component<any, any> {
 }
 
 const styles = StyleSheet.create({
-  imageContainer: {
-    borderRadius: 15,
-    overflow: 'hidden',
-    marginVertical: scaledVertical(10),
-    marginHorizontal: scaledHorizontal(10),
-    backgroundColor: 'white',
-  },
-  iconButtonContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    position: 'absolute',
-    top: scaledVertical(15),
-    right: scaledHorizontal(15),
-  },
-  iconContainer: {
-    padding: scaledVertical(15),
-    borderRadius: 35,
-  }
+  
 });
 
 export default HomeListSection;
