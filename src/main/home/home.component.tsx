@@ -18,7 +18,9 @@ import { scaledHorizontal, scaledVertical } from "../../shared/helper/scale.help
 import HomeInputSection from './section/home-input.section';
 import _ from "lodash";
 import HomeListSection from './section/home-list.section';
-
+import HomeDownloadSection from './section/home-download.section';
+import realm, { getAllSavedImage } from "../../database/flickr-image.database";
+import HomeWebviewSection from './section/home-webview.section';
 @observer
 class HomeComponent extends React.Component<any, any> {
 
@@ -27,6 +29,12 @@ class HomeComponent extends React.Component<any, any> {
   async componentDidMount() {
     this._homeStore.tags = "";
     await this._homeStore.getListImage();
+  }
+
+  showDownloadImage = async () => {
+    const images = await getAllSavedImage();
+    this._homeStore.dataSavedImages = images;
+    this._homeStore.isDownloadShown = true;
   }
 
   render() {
@@ -46,18 +54,10 @@ class HomeComponent extends React.Component<any, any> {
               <IconButtonComponent
                 source={icons.ic_download}
                 onPress={() => {
-
+                  this.showDownloadImage();
                 }}
                 width={scaledVertical(44)}
                 height={scaledVertical(44)}
-                style={{ marginHorizontal: scaledHorizontal(10) }}
-              />
-
-              <IconButtonComponent
-                source={icons.ic_setting}
-                onPress={() => {
-
-                }}
                 style={{ marginHorizontal: scaledHorizontal(10) }}
               />
             </View>
@@ -83,6 +83,10 @@ class HomeComponent extends React.Component<any, any> {
             </View>
           </View>
         </SafeAreaView>
+
+        <HomeDownloadSection />
+        <HomeWebviewSection />
+
         <SafeAreaView style={{ flex: 0, backgroundColor: colors.primary }} />
       </>
     )

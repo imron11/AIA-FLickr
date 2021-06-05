@@ -12,9 +12,10 @@ import colors from "../../theme/colors";
 
 interface ImageCardProps {
     item: any;
+    isShowLove?: boolean;
     onPressWeb?: (link) => void;
     onPressLove?: (item) => void;
-    onPressDelete?: () => void;
+    onPressDelete?: (id) => void;
 }
 
 const ImageCardComponent = (props: ImageCardProps) => {
@@ -61,7 +62,7 @@ const ImageCardComponent = (props: ImageCardProps) => {
                     </View>
                 }
 
-                {props.onPressLove &&
+                {props.isShowLove &&
                     <View
                         style={[
                             styles.iconContainer,
@@ -85,7 +86,7 @@ const ImageCardComponent = (props: ImageCardProps) => {
                     <IconButtonComponent
                         source={icons.ic_clear}
                         onPress={() => {
-                            props.onPressDelete()
+                            props.onPressDelete(_.get(props.item, 'id'));
                         }}
                         tintColor={"red"}
                     />

@@ -2,7 +2,7 @@ import Realm from "realm";
 import _ from "lodash";
 
 class FlickrImageSchema extends Realm.Object {
-    static schema: { name: string; primaryKey: string; properties: { id: string; title: string, link: string; }; };
+    static schema: { name: string; primaryKey: string; properties: { id: string; url: string, title: string, link: string; }; };
 }
 
 FlickrImageSchema.schema = {
@@ -10,13 +10,14 @@ FlickrImageSchema.schema = {
     primaryKey: 'id',
     properties: {
         id: 'int',
+        url: 'string',
         title: 'string',
         link: 'string'
     }
 }
 
 // Create realm
-let realm = new Realm({ schema: [FlickrImageSchema], schemaVersion: 1 });
+let realm = new Realm({ schema: [FlickrImageSchema], schemaVersion: 2 });
 
 let getAllSavedImage = () => {
     return realm.objects('Image');
@@ -26,7 +27,7 @@ let getSavedImageById = (_id: number) => {
     return realm.objects('Image').filtered(`id = ${_id}`);
 }
 
-let addImage = (_title: string, _link: string) => {
+let addImage = (_url: string, _title: string, _link: string) => {
     let _id: number = 0;
     const imagesLenth = (getAllSavedImage() as any).length;
     _id = imagesLenth  + 1;
@@ -34,9 +35,12 @@ let addImage = (_title: string, _link: string) => {
     realm.write(() => {
         const image = realm.create('Image', {
             id: _id,
+            url: _url,
             title: _title,
             link: _link
         });
+
+        return image;
     });
 }
 

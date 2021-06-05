@@ -89,7 +89,7 @@ const BottomSlideModal = (props: ModalProps) => {
 
 const styles = StyleSheet.create({
   modalContainer: {
-    backgroundColor: "white",
+    backgroundColor: colors.primary,
     height: Dimensions.get("screen").height * 0.9
   },
   titleContainer: {

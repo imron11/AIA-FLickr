@@ -14,6 +14,12 @@ class HomeStore {
   @observable tags: string = "";
   @observable dataImages: any = [];
 
+  @observable isWebViewShown: boolean = false;
+  @observable selectedLink: string = '';
+
+  @observable isDownloadShown: boolean = false;
+  @observable dataSavedImages: any = [];
+
   @action getListImage = () => {
 
     this.dataImages = [];
@@ -33,6 +39,7 @@ class HomeStore {
           url: _.get(response[i], 'media.m'),
           width,
           height,
+          title: _.get(response[i], 'title'),
           link: _.get(response[i], 'link')
         });
       });
