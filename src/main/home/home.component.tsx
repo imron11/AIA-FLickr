@@ -38,6 +38,7 @@ class HomeComponent extends React.Component<any, any> {
   }
 
   render() {
+    const dataSavedImages = this._homeStore.dataSavedImages;
     return (
       <>
         <SafeAreaView style={styles.mainContainer}>
@@ -59,6 +60,7 @@ class HomeComponent extends React.Component<any, any> {
                 width={scaledVertical(44)}
                 height={scaledVertical(44)}
                 style={{ marginHorizontal: scaledHorizontal(10) }}
+                badgeLength={dataSavedImages.length}
               />
             </View>
           </View>

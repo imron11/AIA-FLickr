@@ -1,9 +1,13 @@
 import React from "react";
 import {
     Image,
-    TouchableOpacity
+    StyleSheet,
+    Text,
+    TouchableOpacity,
+    View
 } from "react-native";
-import { scaledVertical } from "../../helper/scale.helper";
+import { scaledFontSize, scaledVertical } from "../../helper/scale.helper";
+import colors from "../../theme/colors";
 
 interface iconButtonProps {
     onPress?: () => void;
@@ -12,6 +16,7 @@ interface iconButtonProps {
     height?: number;
     tintColor?: any;
     style?: any;
+    badgeLength?: number
 }
 
 const IconButtonComponent = (props: iconButtonProps) => {
@@ -32,9 +37,40 @@ const IconButtonComponent = (props: iconButtonProps) => {
                         tintColor: props.tintColor ? props.tintColor : "white"
                     }}
                 />
+
+                {props.badgeLength > 0 &&
+                    <View
+                        style={styles.badgeContainer}
+                    >
+                        <Text
+                            style={styles.badgeText}
+                        >
+                            {props.badgeLength}
+                        </Text>
+                    </View>
+                }
             </TouchableOpacity>
         </>
     )
 }
+
+const styles = StyleSheet.create({
+    badgeContainer: {
+        position: 'absolute',
+        top: scaledVertical(-8),
+        right: scaledVertical(-8),
+        backgroundColor: 'red',
+        width: scaledVertical(28),
+        height: scaledVertical(28),
+        borderRadius: 14,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    badgeText: {
+        color: 'white',
+        fontSize: scaledFontSize(16),
+        fontWeight: 'bold'
+    }
+});
 
 export default IconButtonComponent;

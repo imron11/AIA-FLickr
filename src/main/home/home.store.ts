@@ -45,7 +45,9 @@ class HomeStore {
       });
     }
 
-    this.isLoading = false;
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 500);
   }
 
   @action doRefresh = () => {

@@ -1,5 +1,4 @@
 import React from "react";
-import { Text } from "react-native";
 import { observer } from "mobx-react";
 import { container } from "tsyringe";
 import HomeStore from "../home.store";
