@@ -12,19 +12,9 @@ import { Actions } from "react-native-router-flux";
 import images from "../../asset/images";
 import LogoComponent from '../../shared/component/logo';
 import { scaledFontSize, scaledVertical } from "../../shared/helper/scale.helper";
-import { getAllSavedImage } from "../../database/flickr-image.database";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 class SigninComponent extends React.Component<any, any> {
-
-  componentDidMount() {
-    // this.getImage();  
-  }
-
-  getImage = async () => {
-    const images = await getAllSavedImage();
-    console.log("images", images);
-  }
-
   render() {
     return (
       <>
@@ -44,8 +34,9 @@ class SigninComponent extends React.Component<any, any> {
             style={styles.bottomContainer}
           >
             <TouchableOpacity
-              onPress={() => {
-                Actions.push('HomePage');
+              onPress={async () => {
+                await AsyncStorage.setItem('@user', 'public');
+                Actions.reset('HomePage');
               }}
               style={styles.buttonContainer}
             >

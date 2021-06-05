@@ -12,7 +12,7 @@
     "reset:pod": "cd ios/ && rm -rf Pods/ Podfile.lock && pod deintegrate && pod install && cd .."
   },
   "dependencies": {
-    "@react-native-community/async-storage": "^1.12.1",
+    "@react-native-async-storage/async-storage": "^1.15.5",
     "@react-native-community/masked-view": "^0.1.11",
     "@react-native-seoul/masonry-list": "^1.0.4",
     "add": "^2.0.6",

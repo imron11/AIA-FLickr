@@ -3,6 +3,7 @@ import {
   ActivityIndicator,
   Dimensions,
   SafeAreaView,
+  StatusBar,
   StyleSheet,
   View,
 } from "react-native";
@@ -19,7 +20,7 @@ import HomeInputSection from './section/home-input.section';
 import _ from "lodash";
 import HomeListSection from './section/home-list.section';
 import HomeDownloadSection from './section/home-download.section';
-import realm, { getAllSavedImage } from "../../database/flickr-image.database";
+import { getAllSavedImage } from "../../database/flickr-image.database";
 import HomeWebviewSection from './section/home-webview.section';
 @observer
 class HomeComponent extends React.Component<any, any> {
@@ -42,6 +43,7 @@ class HomeComponent extends React.Component<any, any> {
     return (
       <>
         <SafeAreaView style={styles.mainContainer}>
+          <StatusBar backgroundColor={colors.flickrBlue} barStyle={'light-content'} />
           <View
             style={styles.headerContainer}
           >

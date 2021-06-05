@@ -1,6 +1,7 @@
 import React from "react";
 import { Router, Scene, Stack } from "react-native-router-flux";
 
+import BootComponent from "./src/main/boot/boot.component";
 import SigninComponent from "./src/main/signin/signin.component";
 import HomeComponent from "./src/main/home/home.component";
 
@@ -17,6 +18,11 @@ const App = () => {
         <Stack
           key={'root'}
         >
+          <Scene
+            key={'BootPage'}
+            component={BootComponent}
+            hideNavBar
+          />
           <Scene
             key={'SigninPage'}
             component={SigninComponent}
