@@ -27,10 +27,15 @@ let getSavedImageById = (_id: number) => {
     return realm.objects('Image').filtered(`id = ${_id}`);
 }
 
-let addImage = (_url: string, _title: string, _link: string) => {
+let addImage = async (_url: string, _title: string, _link: string) => {
     let _id: number = 0;
-    const imagesLenth = (getAllSavedImage() as any).length;
-    _id = imagesLenth  + 1;
+    const images = await (getAllSavedImage() as any);
+    const imagesLenth = images.length;
+    
+    if (imagesLenth > 0) {
+        const maxId = _.get(_.maxBy(images, 'id'), 'id');
+        _id = maxId + 1;
+    }
 
     realm.write(() => {
         const image = realm.create('Image', {
